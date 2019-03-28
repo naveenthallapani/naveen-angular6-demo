@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="row">
+      <div class="col-sm-12">
+          <!--directive -->
+          <input type="radio" name="colors" (click)="color='lightgreen'">Green
+          <input type="radio" name="colors" (click)="color='grey'">grey
+          <input type="radio" name="colors" (click)="color='blue'">blue
+
+          <h2 [appHighlight]="color">Directive mouse over on me </h2>
+          <h2 [appHighlight]="color" defaultColor="cyan"> on me too! </h2>
+          
+      </div> 
+      <div class="col-sm-12">
+          <div class="panel panel-default">
+              <div class="panel-heading">Variables</div>
+              <div class="panel-body">
+                <h4>Variable Datatypes Interpolation</h4>
+                <p> Ravi Age : {{age}}</p>
+                <p> Ravi Name : {{name}}</p>
+                <p> Fruits : {{fruits}}</p>
+                <p> Gender : {{gender}}</p>
+                <hr/>
+                <h4>Filter</h4>
+                <p> User-json : {{user | json}}</p>
+                <p> User-uppercase : {{user.name | uppercase}}</p>
+                <p> User-number : {{age | number}}</p>
+                <p>date : {{today}}</p>
+                <p>date : {{today | date}}</p>
+                <p>date : {{today | date:'MM-dd-yy'}}</p>
+                <p>date : {{today | date:'hh:mm'}}</p>
+                <p>string : {{ anil| uppercase}}</p>
+                <hr/>
+                <button type="button" class="btn btn-primary" (click)="TodayDate()">Show Date!</button>&nbsp;
+                <button type="button" class="btn btn-primary active" (click)="onClickMe()">Click me!</button>
+  
+                    {{clickMessage}}<br/>
+                <hr/>
+
+                <p [hidden]="hideit" (mouseenter)=over()>This show me hide on mousehover </p>
+                
+                <ol>
+                    <li *ngFor="let fr of fruits">{{fr}}</li>
+                </ol>
+                <hr/>
+                <h4>Table Formats</h4>
+                <table border="1" class="table">
+                    <tr>
+                        <th colspan="3">Fruits</th>
+                    </tr>
+                    <tr>
+                        <td *ngFor="let fr of fruits">{{fr}}</td>
+                    </tr>
+                </table>
+                
+
+                <table border="1" class="table">
+                    <tr>
+                        <th colspan="3">Items name</th>
+                        
+                    </tr>
+                    <tr>
+                        <td *ngFor="let itemsname of items">{{itemsname}}</td>
+                    </tr>
+                
+                    <tr>
+                        <td *ngFor="let itemcost of cost">{{itemcost}}</td>
+                    </tr>
+                </table>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

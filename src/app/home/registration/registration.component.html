@@ -1,0 +1,84 @@
+
+
+
+          <form>
+ 
+ <div class="row"> 
+   <div class="col-sm-offset-5 col-sm-9">
+    <h1>Register Form</h1>
+    
+  
+  </div>
+</div>
+<div>
+    <div class="row"> 
+        <div class="col-sm-offset-1  col-sm-10">
+          <!--objectiveForms-->
+          <h2>Objective Forms</h2>
+          <form name="frm" (submit)="RegForm()">
+            <div class="form-group">
+                <input type="text" name="fname" [(ngModel)]="fname"  placeholder="firstname" >
+               {{fname}}
+              </div>
+            <div class="form-group">
+                <input type="text" name="fname" [(ngModel)]="lname" placeholder="lastname">
+                {{lname}} 
+            </div>
+            <div class="form-group">
+                <input type="text" name="email" [(ngModel)]="email" placeholder="enteremail">
+                {{email}} 
+            </div><br/>
+          </form>
+            <!--states-->
+            <br/>
+            <h2>Form States</h2>
+             <form name="frmstates" #f=ngForm> 
+                <input type="text" name="firstname" [(ngModel)]="myname" #FirstName=ngModel placeholder="firstname" autocomplete="off" required>
+                <p *ngIf="FirstName.dirty" style="color:red">This Is dirty Field</p>
+                <p *ngIf="FirstName.touched" style="color:red">This Is touched Field</p>
+                <p *ngIf="f.invalid" style="color:red">This Is invalid Field</p>
+
+                <input type="submit">
+             </form><br/>
+<pre>
+ **form field states
+ 
+    valid :: {{FirstName.valid}}
+    invalid :: {{FirstName.valid}}
+    dirty :: {{FirstName.dirty}}
+    pristine :: {{FirstName.pristine}}
+    touched :: {{FirstName.touched}}
+    untouched :: {{FirstName.untouched}}
+    <!-- error :: {{FirstName.haserror('required')}} -->
+**form States   
+    valid :: {{f.valid}}
+    invalid :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched :: {{f.touched}}
+    untouched :: {{f.untouched}}
+</pre>
+    <!-- <p>Please fill in this form to create an account.</p>
+    <label for="text"><b>First Name</b></label>
+    <input type="text" placeholder="Enter First name" name="un" required>
+    <label for="text"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last name" name="ln" required>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+    <hr>
+    <div class="col-sm-offset-5 col-sm-9">
+    <button type="submit" class="registerbtn">Register</button>
+  </div> -->
+  </div>
+  
+  
+</div>
+</div>
+
+</form>

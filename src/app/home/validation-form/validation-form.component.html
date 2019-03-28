@@ -1,0 +1,91 @@
+<p>
+  validation-form works!
+</p>
+
+<div class="container">
+  <div class="row"> 
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+        <div class="panel-heading">Form States</div>
+        <div class="panel-body">
+    
+     
+       
+           
+  
+<!--states-->
+<br/>
+<div class="container">
+<div class="row"> 
+   <div class="col-sm-offset-2">
+              <form name="frmstates" #f=ngForm> 
+                  <mat-form-field class="example-full-width">
+              <input  matInput type="text" name="firstname" [(ngModel)]="myname" #FirstName=ngModel placeholder="firstname" autocomplete="off" required>
+         
+                <mat-error *ngIf="FirstName.dirty" style="color:red">This Is dirty Field</mat-error>
+                <mat-error *ngIf="FirstName.touched" style="color:red">This Is touched Field</mat-error>
+                 <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                   
+                </mat-form-field><br/><br/>
+                    <mat-form-field class="example-full-width">
+              
+                        <input matInput type="text" name="lastname" [(ngModel)]="myname1" #FirstName1=ngModel placeholder="LastName" required>
+                        <mat-error  *ngIf="FirstName1.dirty" style="color:red">This Is dirty Field</mat-error>
+                        <mat-error *ngIf="FirstName1.touched" style="color:red">This Is touched Field</mat-error>
+                        <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                    </mat-form-field><br/><br/>
+                  
+                 
+                    
+                    <mat-form-field class="example-full-width">
+              
+                        <input matInput type="text"  name="email" placeholder="enter email"  [(ngModel)]="myname3" #FirstName2=ngModel value="" required>
+                        <mat-error *ngIf="FirstName2.dirty" style="color:red">This Is dirty Field</mat-error>
+                        <mat-error *ngIf="FirstName2.touched" style="color:red">This Is touched Field</mat-error>
+                        <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                      </mat-form-field><br/><br/>
+                    <mat-form-field class="example-full-width">
+              
+                        <input matInput type="text" name="pw" placeholder="enter password"  [(ngModel)]="myname4" #FirstName3=ngModel  value="" required>
+                        <mat-error *ngIf="FirstName3.dirty" style="color:red">This Is dirty Field</mat-error>
+                        <mat-error *ngIf="FirstName3.touched" style="color:red">This Is touched Field</mat-error>
+                        <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                      </mat-form-field><br/><br/>
+                      <mat-form-field class="example-full-width">
+              
+                          <input matInput name="cpw" placeholder="confirm password"  [(ngModel)]="myname5" #FirstName4=ngModel value="" required>
+                          <mat-error *ngIf="FirstName4.dirty" style="color:red">This Is dirty Field</mat-error>
+                        <mat-error *ngIf="FirstName4.touched" style="color:red">This Is touched Field</mat-error>
+                        <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                        </mat-form-field><br/><br/>
+                        
+                 
+                 <mat-form-field class="example-full-width">
+              
+                    <input matInput placeholder="mobile number" name="mnum" [(ngModel)]="myname6" #FirstName5=ngModel value="" required>
+                    <mat-error *ngIf="FirstName5.dirty" style="color:red">This Is dirty Field</mat-error>
+                        <mat-error *ngIf="FirstName5.touched" style="color:red">This Is touched Field</mat-error>
+                        <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                  </mat-form-field><br/><br/>
+
+                  <mat-form-field class="example-full-width">
+              
+                      <input matInput name="pc" placeholder="Pincode"  [(ngModel)]="myname7" #FirstName7=ngModel value="" required>
+                      <mat-error *ngIf="FirstName7.dirty" style="color:red">This Is dirty Field</mat-error>
+                          <mat-error *ngIf="FirstName7.touched" style="color:red">This Is touched Field</mat-error>
+                          <mat-error *ngIf="f.invalid" style="color:red">This Is invalid Field</mat-error>
+                    </mat-form-field><br/><br/>
+                  
+ 
+              
+                 <button  mat-raised-button color="primary">submit</button>
+                  </form><br/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
+    

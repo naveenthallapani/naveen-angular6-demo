@@ -1,0 +1,17 @@
+<p>
+  edit works!
+</p>
+
+<form (submit)="editUserSubmit($event)" class="userDetails">
+  
+    <input type="text" id= "fname" [(ngModel)]="userdata.data.fname" name = "fnaxxxxme" placeholder="First name*">
+    <input type="text" id= "lname" placeholder="Last name*">
+    <input type="number" id= "age" placeholder="Age*">
+    <input type="email" id= "email" placeholder="Email*">
+   
+    <input type="password" id= "password" placeholder="Password*">
+    <input type="submit" value="Update">
+  </form>
+
+  {{userdata.data.id}}
+  {{userdata.data.fname}}
